@@ -393,6 +393,8 @@ public class ParseUser extends ParseObject {
                                 .onSuccessTask(
                                         task15 -> {
                                             State result = task15.getResult();
+                                            System.out.println("login success");
+                                            System.out.println(result);
                                             final ParseUser user = ParseObject.from(result);
                                             return saveCurrentUserAsync(user)
                                                     .onSuccess(task14 -> user);
